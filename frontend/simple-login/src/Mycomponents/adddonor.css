@@ -1,0 +1,45 @@
+.input_type{
+    
+}
+#feildsets{
+    box-shadow: 10px 2px 25px 10px grey;
+    margin-top: 5rem;
+    margin-left: 1rem;
+    padding: 1rem;
+    margin-right: 1rem;
+}
+.input_type{
+    background-color:black;
+    padding: .3rem;
+    margin: .3rem;
+    color: white;
+    font-family: monospace;
+    border-radius: 5px;
+    height: 25px;
+    width: 20rem;
+    
+}
+::placeholder{
+    color: white;
+    font-family: cursive;
+    font-size: 16px;
+}
+#legends{
+    color:forestgreen;
+    font-size: 1.1rem;
+    font-family:monospace;
+}
+.buttons{
+    background-color: white;
+    color: black;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    transition: all 1s;
+    border-radius: 5px;
+}
+.buttons:hover{
+    background-color: black;
+    color: white;
+}

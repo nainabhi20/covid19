@@ -1,0 +1,48 @@
+.authlink{
+    text-decoration:none;
+    background-color: black;
+    color: white;
+    transition: all 1s;
+    padding: 5px;
+    margin: 2rem;
+    border-radius: 10px;
+}
+.signin{
+    padding: 2rem;
+    margin: 2rem;
+    margin-top: 2rem;
+    background-color: cadetblue;
+    border-radius: 10px;
+    
+}
+.signinbut{
+    background-color:white;
+    border-radius: 20px;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.signinbut:hover{
+    background-color: bisque;
+}
+#signout_but{
+    background-color:lightskyblue;
+    color:azure;
+    border-radius: 5px;
+    border: 1px solid lightskyblue;
+    padding: 10px;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition: all 1s;
+}
+.logout{
+    background-color: cadetblue;
+    padding: 20px;
+    margin: 2rem;
+    border-radius: 10px;
+}
+#signout_but:hover{
+    background-color:dodgerblue;
+}

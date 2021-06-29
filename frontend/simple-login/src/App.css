@@ -1,0 +1,99 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+@media screen and (max-width: 790px) {
+    html{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    html{
+        font-size: 13px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    html{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 380px) {
+    html{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 320px) {
+    html{
+        font-size: 8px;
+    }
+}
+
+body{
+   background-image: url("fight.jpg");
+    background-repeat:repeat-x;
+    background-attachment: fixed;
+    
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#Navbar{
+    background-color: black;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.links{
+    color:white;
+    font-size: 1rem;
+    margin-right:1.6rem;
+    text-decoration: none;
+    transition-property: all;
+    transition-duration: .6s;
+    font-family:inherit;
+    
+}
+.links:hover{
+    color: aqua;
+}
+.active{
+    color: aqua;
+    border-bottom: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: aqua;
+    font-size: 1.5rem;
+    
+}

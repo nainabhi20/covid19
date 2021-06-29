@@ -1,0 +1,17 @@
+.donor{
+    background-color: black;
+    text-decoration: none;
+    margin: 2rem;
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border-radius: 5px;
+    transition: all 1s;
+    font-family: cursive;
+}
+.donor:hover{
+    background-color: aqua;
+    color: black;
+}
