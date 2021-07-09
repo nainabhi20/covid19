@@ -1,0 +1,39 @@
+.front{
+    
+}
+.heading{
+    margin-left: 1rem;
+    background-color: white;
+    padding: 2rem;
+    border: 1px solid grey;
+}
+.heading:hover{
+    box-shadow: 2px 2px 7px 2px lightblue;
+}
+.newlink{
+    color: grey;
+    font-size: 20px;
+    margin-left: 1rem;
+    text-decoration: none;
+    padding: 10px;
+    padding-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.newlink:hover{
+    color:blue;
+}
+.newactive{
+    color: blue;
+    border-bottom: 5px solid blue;
+}
+.nain{
+    margin: 2rem;
+}
+.image{
+    transition: 1s all;
+}
+.image:hover{
+    transform: scale(1.02);
+    cursor:all-scroll;
+}

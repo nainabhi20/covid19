@@ -2,7 +2,8 @@ import './App.css';
 import axios from 'axios';
 import Header from './header.js';
 import Covid19data from './Mycomponents/covid19data.js';
-import Signin from './Mycomponents/signin.js'
+import Signin from './Mycomponents/signin.js';
+import Aboutcovid19 from'./Mycomponents/aboutcovid19.js';
 import {
     BrowserRouter as Router,
     Route,
@@ -40,6 +41,7 @@ function App() {
         <Route exact path='/contactus' component={Contactus}/>
         <Route exact path='/covid19data' component={Covid19data}/>
         <Route exact path='/signin' component={Signin}/>
+        <Route exact path='/aboutus' component={Aboutcovid19}/>
         </switch>
         </Router>
       </div>
