@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import cookie from 'react-cookies'
 import {motion} from 'framer-motion';
 import validator from 'validator';
 import { instanceOf } from 'prop-types';
@@ -14,13 +15,13 @@ import {
 export default class Login extends React.Component{
     constructor(props){
         super(props);
-        this.state={email:'',pass:'',islogin:false};
+        this.state={email:cookie.load('userId'),pass:'',islogin:cookie.load('islogin')};
     }
     render(){
         //check weither there is any cookie present or not if 
         //present then set state islogin as true and do not the
         //login page now
-        if(this.state.islogin==false){
+        if(this.state.islogin=='false'){
         return(
         <motion.div 
             initial={{scaleX:0,opacity:0}}
@@ -48,18 +49,24 @@ export default class Login extends React.Component{
                                  alert("Enter coorect email");
                                 }else{
                                 axios.post('/login',this.state).then((resp)=>{
-                                 if(resp.data=='success'){
+                                 if(resp.data.status=='success'){
                                  alert("Login successfully");
                                  this.setState({islogin:true});
                                  //also set cookies here 
                                  //
+                                  
+                                     cookie.save('userId',this.state.email, { path: '/' });
+                                     cookie.save('islogin','true', { path: '/' });
+                                     cookie.save('userName',resp.data.name, { path: '/' });
+                                     
                                  this.setState({email:'',pass:''});
                                 }
-                                if(resp.data=='Incorrect password'){
+                                if(resp.data.status=='Incorrect password'){
                                     alert("Incorrect password");
                                 }
-                                if(resp.data=="No such user is present")
+                                if(resp.data.status=="No such user is present")
                                     {
+                                        
                                         alert("No such users is present");
                                     }
 
@@ -80,11 +87,15 @@ export default class Login extends React.Component{
             animate={{scaleX:1,opacity:1}}
             transition={{duration:.8,type:'spring'}}
              className='logout'>
-              <p>You are already sign in as cookie values</p>
+              <p>Hi  <b><i style={{color:'white',fontSize:'1.3rem'}}>{cookie.load('userName')}</i></b> You are already sign in as<b> <i style={{color:'blue',fontSize:'1.3rem'}}>{cookie.load('userId')}</i></b></p>
              <button id='signout_but'
              onClick={()=>{
-             this.setState({islogin:false});
-             alert("Log out sucessfuly")
+             this.setState({email:''});
+             alert("Log out sucessfuly");
+             cookie.remove('userId', { path: '/' });
+             cookie.remove('userName', { path: '/' });
+             cookie.save('islogin','false', { path: '/' });
+             this.setState({islogin:'false'});
                //set islogin as false 
              //and deletes the cookies from the web
              }}

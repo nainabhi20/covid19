@@ -52,16 +52,19 @@ app.post('/login',(req,res)=>{
    const que="SELECT * FROM USERS_DETAIL WHERE EMAIL="+"'"+req.body.email+"'";
     con.query(que,(err,result,feilds)=>{
        if(err)
-           res.send("There is some error try again later");
+           res.send({status:"There is some error try again later"});
         else{
             console.log(result);
         if(result.length==0)
-            res.send("No such user is present");
+            res.send({status:"No such user is present"});
         else{
-             if(result[0].PASSWORD==req.body.pass)
-              res.send("success");
+             if(result[0].PASSWORD==req.body.pass){
+                 console.log(result[0].NAME);
+              res.send({status:"success",name:result[0].NAME});
+              
+             }
             else
-                res.send("Incorrect password");
+                res.send({status:"Incorrect password"});
         }
         }
     });
