@@ -97,3 +97,33 @@ body{
     font-size: 1.5rem;
     
 }
+.userDetail{
+  float: right;
+  margin-right: 1.5rem;
+  color:white;
+  text-align: center;
+  border:1px solid white;
+  position:relative;
+  top:-5px;
+  padding:2px;
+  text-overflow:clip;
+  overflow:hidden;
+  padding-bottom:5px;
+}
+#heading{
+  margin: 1rem;
+  color:darkslategray;
+}
+.BMI{
+  background-color: darkcyan;
+}
+.input{
+  margin: 1rem;
+  background-color: black;
+  color: white;
+  padding:5px;
+  width: 50%;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-left: 3px;
+}

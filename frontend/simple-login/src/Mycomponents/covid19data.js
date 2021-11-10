@@ -11,7 +11,9 @@ export default class extends React.Component{
      async componentDidMount(){
          var res=await fetch('https://www.trackcorona.live/api/countries');
          var a=await res.json();
+         console.log(a.data);
          this.setState({coviddata:a.data,loading:false});
+         
          
      }
     render(){
