@@ -5,6 +5,7 @@ import Covid19data from './Mycomponents/covid19data.js';
 import Signin from './Mycomponents/signin.js';
 import Aboutcovid19 from'./Mycomponents/aboutcovid19.js';
 import Mypost from './Mycomponents/Mypost';
+import News from './Mycomponents/News';
 import {
     BrowserRouter as Router,
     Route,
@@ -41,6 +42,9 @@ function App() {
         <NavLink exact activeClassName='active' className='links' to='/showmypost'>
         Show My Posts
         </NavLink>
+        <NavLink exact activeClassName='active' className='links' to='/news'>
+          News
+          </NavLink>
         <div className="userDetail">
           <p>
             {(cookie.load("islogin"))?cookie.load("userName"):"No user login"}
@@ -55,6 +59,7 @@ function App() {
         <Route exact path='/signin' component={Signin}/>
         <Route exact path='/aboutus' component={Aboutcovid19}/>
         <Route exact path="/showmypost" component={Mypost}/>
+        <Route exact path="/news" component={News}/>
         </switch>
         </Router>
         </div>
